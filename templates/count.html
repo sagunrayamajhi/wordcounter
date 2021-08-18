@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>COUNT</title>
+</head>
+<body>
+<a href="{% url 'home' %}">New Test</a>
+<form action="{% url 'about' %}">
+    <input type="submit" value="About"/>
+</form>
+<h1>Count == {{count}}</h1>
+Find the original text below<br/>
+{{fullText}}
+<br/>
+<br/>
+<h1> Word Count:</h1>
+{% for word, totalcount in sortedWords %}
+{{word}} : {{totalcount}}
+<br/>
+{% endfor %}
+</body>
+</html>
